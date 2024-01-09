@@ -1,0 +1,185 @@
+/* -- --- ---- ESTILOS GENERALES ---- --- -- */
+/* Pagina segura para extraer el tipo de fuente que te guste */ 
+/* Es una pagina oficial de Google, asi que mas seguro imposible */
+/* https://fonts.google.com/ */
+
+/* IMPORTANTE *//* Cuando se importe un elemento, siempre colocarlo arriba */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap'); 
+
+* {
+  /* -- Los elementos tomaran como maximo el tamaño del contenedor padre -- */
+  box-sizing: border-box;
+
+  /* -- Elimina el margen de todos los elementos -- */
+  margin: 0;
+  /* -- Elimina el padding de todos los elementos -- */
+  padding: 0;
+  /* -- Elimina los bordes de todos los elementos -- */
+  border: 0;
+
+  /* -- Todos los elementos de texto utilizaran la fuente 'Roboto Slab' -- */  
+  /* -- En caso de que la primera fuente no este disponible ira probando con las siguientes hasta que se asigne una -- */
+  font-family: 'Roboto Slab', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html, body {
+  /* -- TAMAÑO PAGINA A4 -- */
+  /* -- Establecer tamaño fijo en la caja contenedora -- */
+  width: 210mm; /* ANCHO */
+  height: 297mm; /* ALTO */
+  
+  /* Simplemente para tener una referencia, y no quemarte la retina con el blanco de fondo */
+ /* background-color: black;
+  background-color: #ffffff; */
+}
+
+ /* --------------- --------------- ---------------- A PARTIR DE AHORA ---------------- --------------- --------------- */ 
+  /* Establece el tamaño de los elementos en porcentaje en relacion al tamaño fijo establecido en la caja contenedora */
+            /* Se puede establecer el tamaño en otro tipo de medida pero para mi es mas facil usar % */
+#header {
+  width: 100%;
+  height: 20%;
+
+  /* Borde para tener el limite controlado */
+ /* border: 1px solid white; */
+}
+#main {
+  width: 100%;
+  height: 60%;
+
+  /* Borde para tener el limite controlado */
+  /* border: 1px solid white; */
+}
+#footer {
+  width: 100%;
+  height: 20%;
+  
+  /* Borde para tener el limite controlado */
+  border: 1px solid white;
+}
+
+/* --------------- --------------- ---------------- sp ---------------- --------------- --------------- */ 
+/*------------*/
+/*-- HEADER --*/
+/*------------*/
+#header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+/* DIVISION IZQUIERDA */
+#cont_img {
+  width: 25%;
+  height: 100%;
+  /* background-color: #000000; */
+}
+#foto_perfil_ {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  clip-path: circle(40%);
+}
+/* DIVISION DERECHA */
+#cont_txt_title {
+  width: 75%;
+ background-color: rgb(164, 203, 243);
+ border-top-left-radius: 20px;
+ border-bottom-left-radius: 20px;
+}
+#cont_txt_title h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+#cont_txt_title p {
+  text-align: center;
+  font-size: 2.5rem;
+}
+/* --------------- --------------- ---------------- sp ---------------- --------------- --------------- */ 
+/*----------*/
+/*-- MAIN --*/
+/*----------*/
+#main {
+  text-align: center;
+ /* background-color: #d8bfbf; */
+}
+#main > h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2%;
+}
+.trabajos_pasados_presente {
+  margin-bottom: 10%;
+}
+.trabajos_pasados_presente, 
+.trabajos_pasados_presente .titulos_descripcion {
+  width: 100%;
+  height: auto;
+}
+.titulos_descripcion {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-right: 2%;
+  padding-left: 2%;
+  border-top: 1px solid #ededed;
+}
+.puesto,.cargo_fecha {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.descripcion {
+  width: 95%;
+  height: auto;
+  margin: 5px auto 0 auto;
+  text-align: center;
+}
+/* --------------- --------------- ---------------- sp ---------------- --------------- --------------- */ 
+/*------------*/
+/*-- FOOTER --*/
+/*------------*/
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#footer div {
+  width: 33.33%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.cont_contact {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cont_contact p {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-right: 1px solid #d3d3d3;
+}
+#footer div:nth-child(1) p {
+  /*background-color: lightcoral;*/
+  padding-left: 10%;
+  border-left: 1px solid #d3d3d3; 
+}
+#footer div:nth-child(1) {
+  /*background-color: lightcoral;*/
+  
+  border-left: 1px solid #d3d3d3; 
+}
+
+#footer div:nth-child(2) {
+  /*background-color: lightgoldenrodyellow;*/
+}
+#footer div:nth-child(3) {
+  /*background-color: lightsteelblue;*/
+}
