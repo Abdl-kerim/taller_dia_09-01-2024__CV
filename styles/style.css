@@ -27,10 +27,9 @@ html, body {
   /* -- Establecer tamaño fijo en la caja contenedora -- */
   width: 210mm; /* ANCHO */
   height: 297mm; /* ALTO */
-  
-  /* Simplemente para tener una referencia, y no quemarte la retina con el blanco de fondo */
- /* background-color: black;
-  background-color: #ffffff; */
+
+  /* COLOR DE FONDO DE LA PAGINA */
+  /* background-color: black; */
 }
 
  /* --------------- --------------- ---------------- A PARTIR DE AHORA ---------------- --------------- --------------- */ 
@@ -39,23 +38,14 @@ html, body {
 #header {
   width: 100%;
   height: 20%;
-
-  /* Borde para tener el limite controlado */
- /* border: 1px solid white; */
 }
 #main {
   width: 100%;
   height: 60%;
-
-  /* Borde para tener el limite controlado */
-  /* border: 1px solid white; */
 }
 #footer {
   width: 100%;
   height: 20%;
-  
-  /* Borde para tener el limite controlado */
-  border: 1px solid white;
 }
 
 /* --------------- --------------- ---------------- sp ---------------- --------------- --------------- */ 
@@ -64,32 +54,35 @@ html, body {
 /*------------*/
 #header {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  flex-wrap: wrap; /* EN CASO DE QUE LOS ELEMENTOS NO QUEPAN EN EL ANCHO ESTABLECIDO COMO LIMITE, EL ULTIMO ELEMENTO PASARA A POSICIONARSE JUSTO DEBAJO */
+  align-items: center; /* ALINEA LOS ELEMENTOS EN EL EJE Y, "VERTICALMENTE" */
+  justify-content: space-between; /* ALINEA LOS ELEMENTOS EN EL EJE X, "HORIZONTALMENTE" */
 }
-/* DIVISION IZQUIERDA */
+/* DIVISION HEADER IZQUIERDA */
 #cont_img {
   width: 25%;
   height: 100%;
+  /* COLOR DE FONDO DE LA SECCION IZQUIERDA DEL HEADER, DONDE SE POSICIONA LA FOTO DE PERFIL */
   /* background-color: #000000; */
 }
 #foto_perfil_ {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  clip-path: circle(40%);
+  object-fit: contain; /* AJUSTARA LA IMAGEN AL CONTENEDOR DONDE SE HAYA INTRODUCIDO */
+  clip-path: circle(40%);  /* SI QUIERES LA FOTO DE PERFIL CUADRADA SIMPLEMENTE ELIMINA ESTE SELECTOR */
 }
-/* DIVISION DERECHA */
+/* DIVISION HEADER DERECHA */
 #cont_txt_title {
   width: 75%;
- background-color: rgb(164, 203, 243);
- border-top-left-radius: 20px;
- border-bottom-left-radius: 20px;
+  /* COLOR DE FONDO DE LA SECCION DERECHA DEL HEADER, DONDE SE POSICIONA EL TITULO DE CV */
+  background-color: rgb(164, 203, 243);
+  /* SI QUIERES ELIMINAR LOS BORDES REDONDEADOS ELIMINA LOS DOS SELECTORES DE ABAJO */
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 #cont_txt_title h1 {
-  text-align: center;
-  font-size: 3rem;
+  text-align: center; /* CENTRA EL TEXTO AL CENTRO */
+  font-size: 3rem;    /* CAMBIA EL TAMAÑO DEL TEXTO */
 }
 #cont_txt_title p {
   text-align: center;
@@ -101,11 +94,12 @@ html, body {
 /*----------*/
 #main {
   text-align: center;
- /* background-color: #d8bfbf; */
+  /* COLOR DE FONDO DE LA SECCION PRINCIPAL */
+  /* background-color: #d8bfbf; */
 }
 #main > h1 {
   font-size: 2.5rem;
-  margin-bottom: 2%;
+  margin-bottom: 2%; /* AÑADE UN MARGEN INFERIOR AL CONTENEDOR */
 }
 .trabajos_pasados_presente {
   margin-bottom: 10%;
@@ -121,11 +115,14 @@ html, body {
   justify-content: space-between;
   padding-right: 2%;
   padding-left: 2%;
-  border-top: 1px solid #ededed;
+  /* LINEA DIVISORIA DE LOS DIFERENTES TRABAJOS, SE PUEDEN ELIMINAR LOS TRES SIGUIENTES SELECTORES EN CASO DE NO QUERER NINGUNA LINEA DIVISORIA */
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #ededed; /* CAMBIA EL COLOR DE LAS LINEAS */
 }
 .puesto,.cargo_fecha {
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 700; /* CAMBIA EL GROSOR DE LA LETRA, "FINA, NORMAL, NEGRITA..." */
 }
 .descripcion {
   width: 95%;
@@ -167,19 +164,20 @@ html, body {
   border-right: 1px solid #d3d3d3;
 }
 #footer div:nth-child(1) p {
-  /*background-color: lightcoral;*/
   padding-left: 10%;
   border-left: 1px solid #d3d3d3; 
 }
 #footer div:nth-child(1) {
+  /* CAMBIA EL COLOR DE FONDO DE LA SECCION LATERAL IZQUIERDA DEL FOOTER */
   /*background-color: lightcoral;*/
   
   border-left: 1px solid #d3d3d3; 
 }
-
 #footer div:nth-child(2) {
+  /* CAMBIA EL COLOR DE FONDO DE LA SECCION CENTRAL DEL FOOTER */
   /*background-color: lightgoldenrodyellow;*/
 }
 #footer div:nth-child(3) {
+  /* CAMBIA EL COLOR DE FONDO DE LA SECCION LATERAL DERECHA DEL FOOTER */
   /*background-color: lightsteelblue;*/
 }
